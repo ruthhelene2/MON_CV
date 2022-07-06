@@ -1,56 +1,305 @@
-header
+@charset "UTF-8";
+@font-face{
+	font-family: 'mapolice';
+	src:url('fonts/nintemare.ttf');
+}
+
+@font-face{
+	font-family: 'soustitrepage';
+	src:url('fonts/Miana.otf');
+}
+	
+@font-face{
+	font-family: 'paragraphe';
+	src:url('fonts/gothic_ultra_ot.otf');
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+   
+
+}
+.print-area
 {
-    margin-left: 13%;
-    vertical-align: middle;
+    width: 80%;
+    margin: 20px auto;
+}
+.print-area .header
+{
+    width: 100%;
+    height: 200px;
+    background-color:rgb(114, 163, 163);
+    display: flex;
+    /*align-items: center;*/
+    position: relative;
+}
+.print-area .header .t1
+{
     text-align: center;
-    background-color: blueviolet;
+}
+.header img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+    position: absolute;
+    top:50px;
+    left: 65px;
+    border: 5px solid white;
+    box-shadow: 3px 3px 10px rgb(0, 0, .5);
+    cursor: pointer;
+    transition: .5s;
+    user-select: none;
+    /*filter: grayscale(100%);*/
+}
+.header img:hover{
+    filter: grayscale(0%);   
+    transform: scale(1.05);   /*tranforme l'image */
+    box-shadow: 3px 3px 20px rgb(0, 0, 0, .5);
+}
+.header-text
+{
+    color: black;
+    width: 60%;
+    margin-left: auto;
+    font-family: mapolice;
+
+}
+.header-text p
+{
+    font-size: 30px;
     color: white;
-    height: 11vh;
-    width: 75.91%;
-    padding-top: 0%;
+}
+.header-text h1
+{
+    font-size: 80px;
+    font-weight: normal;
+    color: black;
+}
+.content
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.left-area
+{
+    width: 30%;
+    /*background-color: rgb(236, 236, 236);*/
+    background-color: rgb(183, 194, 190);
+    text-align: center;
+}
+.left-area .contact
+{
+    margin-top: 110px;
+    padding: 0 30px;
+
+}
+.contact h4{
+    font-size: 22px;
+    font-weight: normal;
+    margin: 20px 0;
+    color: black  bold;
+}
+.contact h1
+{
+    color: #3525af;
+}
+.contact h5
+{
+    font-size: 18px;
+    margin: 10 0;
+    
+}
+.contact p
+{
+    font-size: 17px;
+    padding-bottom: 15px;
+}
+.skills
+{
+    margin: 30px;
+}
+.skills h1
+{
+    color: #3525af;
+}
+.skills h5
+{
+    font-size: 30px;
+    font-weight: normal bold;
+}
+.langue h1
+{
+    color: #3525af;
+}
+.sport h1
+{
+    color: #3525af;
+}
+.follow h1
+{
+    color: #3525af;
 }
 
-.gauche
+.bars
 {
-    margin-left: 12.90%;
-    top:16%;
-    width: 18%;
-    padding:0.50%;
-    border-left: 3px solid;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /*pour creer 2 colonnes et les lignes*/
+    grid-gap: 20px 10px;
+    padding: 0 20px;
+}
+.bars .bar p
+{
+    font-size: 15px;
+    font-weight: bold;
+}
+.bar span
+{
+    display: block;  /*Pour creer les barres verticales*/
+    width: 100%;
+    height: 10px;
+    background-color: gray;
+    margin-top: 10px;
+    border-radius: 10px;
+    position: relative;   
+}
+.bar span::before
+{
     position: absolute;
-    border-bottom: 3px solid;
-
+    content: "";
+    width: 80%;
+    height: 80%;
+    background-color: black;
+    top:50%;
+    left: 2px;
+    transform: translateY(-50%);
+    border-radius: 10px;
 }
-.droite
+.follow h1
 {
-    margin-left: 5%;
-    top:16%;
-    width: 56.7%;
-    left: 25.35%;
-    padding:0.5%;
-    border-left: 3px solid;
-    border-right: 3px solid;
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: normal;
+    font-weight: bold;
+}
+.follow .fbk img
+{
+    display: inline-block;
+    padding:10px;
+}
+.langue h5
+{
+    font-size: 18px;
+    margin: 10 0;
+    font-weight: normal;
+}
+.sport h5
+{
+    font-size: 18px;
+    margin: 10 0;
+    font-weight: normal;
+    
+}
+.left-area .icon
+{
+    font-size: 30px;
+    color:#9153c9;
+}
+/*.left-area img 
+{
+    width:2em;
+    height: 2em;
+    color: indianred;
+}*/
+/*Partie droite */
+.right-area
+{
+    width: 70%;  
+}
+.right_immer
+{
+    padding: 30px;
+    color: #292b2f;
+}
+.right_immer .education
+{
+    margin-top: 30px;
+}
+.right_immer .li_wrap
+{
+    display: flex;
+    margin-bottom: 15px;
+}
+.right_immer .li_wrap .date 
+{
+    width: 125px;
+    color: #9153c9;
+    font-family:paragraphe ;
+    font-size: 30px;
+} 
+.right_immer .li_wrap .info
+{
+    width: calc(100% - 125px);
+    padding-left: 25px;
+    position:relative;
+}
+.right_immer .li_wrap .info_title
+{
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color:#9153c9;
+    font-style: italic;
+    font-family:paragraphe ;
+    font-size: 30px;
+}
+.right_immer .li_wrap .info_com
+{
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 3px;
+}
+.right_immer .li_wrap .info_cont
+{
+    margin-top: 15px;
+}
+.right_immer .li_wrap .info::before
+{
+    content: "";
     position: absolute;
-    border-bottom: 3px solid;
+    top:3px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background:#9153c9;
+    border-radius: 50%;
 }
-.photo
+.right_immer .li_wrap .info::after
 {
-    margin-top: 1vh;
-    width: 12.6vw;
-    height: 31vh;
+    content: "";
+    position: absolute;
+    top:10px;
+    left: 4px;
+    width: 2px;
+    height: 90%;
+    background:#9153c9;
 }
-ul
+.right_immer
 {
-    margin-left: -20px;
+    font-family:soustitrepage;
+    color: black;
+    margin-left: auto;
+    font-size: 20px;
+}
+.right_immer .education .title
+{
+    width:0px;
+    color: lawngreen;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    margin-top: 0px;
+    padding-bottom: 10px;
+}
 
-}
-a
-{
-    text-decoration: none;
-
-}
-.droite h2
-{
-    text-transform:uppercase ;
-    margin-top: -20;
-}
